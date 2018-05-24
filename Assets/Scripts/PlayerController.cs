@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour {
     public float jumpStrength = 5.0f;
     private GameObject gameControllerObject;
     private GameController gameController; 
-    private int score;
 
 	// Use this for initialization
 	void Start () 
@@ -20,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 
         rigidbody = GetComponent<Rigidbody>();
         isJumpInProgress = false;
-        score = 0; 
 	}
 	
 	// Update is called once per frame
@@ -66,7 +64,7 @@ public class PlayerController : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "Floor")
+        if (col.gameObject.tag == "floor")
         {
             isJumpInProgress = false; 
         }

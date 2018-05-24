@@ -8,6 +8,7 @@ TagManager:
   - reward
   - portal_in
   - portal_out
+  - floor
   layers:
   - Default
   - TransparentFX
